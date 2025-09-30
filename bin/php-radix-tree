@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use PhpRadixTreeGenerator\App\Console\Commands\Generate;
+use Symfony\Component\Console\Application;
+
+$autoloadFiles = [
+	__DIR__ . '/../vendor/autoload.php',
+];
+
+foreach ($autoloadFiles as $autoloadFile) {
+	if (file_exists($autoloadFile)) {
+		require_once $autoloadFile;
+		break;
+	}
+}
+
+$app = new Application();
+
+$app->add(new Generate());
+
+$app->run();

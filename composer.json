@@ -1,0 +1,55 @@
+{
+    "name": "samlitowitz/php-radix-tree-generator",
+    "description": "Generate PHP code for a Radix Tree for a static set of data",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Sam Litowitz",
+            "email": "samlitowitz@users.noreply.github.com"
+        }
+    ],
+    "sort-packages": true,
+    "bin":  [
+        "bin/php-radix-tree"
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "PhpRadixTreeGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpRadixTreeGenerator\\Tests\\GeneratedCode\\": "tests/generated-code/",
+            "PhpRadixTreeGenerator\\Tests\\Unit\\": "tests/unit/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "symfony/console": "^7.3",
+        "symfony/serializer-pack": "^1.3",
+        "symfony/json-streamer": "^7.3",
+        "symfony/type-info": "^7.3",
+        "nikic/php-parser": "^5.6",
+        "league/csv": "^9.25"
+    },
+    "scripts": {
+        "check": [
+            "@analyze",
+            "@cs-check",
+            "@unit-tests"
+        ],
+        "analyze": "phpstan --ansi analyse -vvv",
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "unit-tests": "phpunit --colors=always"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.3",
+        "phpstan/phpstan": "^2.1",
+        "samlitowitz/phpstan-opinionated-nomenclature": "^1.0",
+        "squizlabs/php_codesniffer": "^4.0",
+        "phpstan/phpstan-symfony": "^2.0"
+    }
+}

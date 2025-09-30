@@ -1,0 +1,59 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/samlitowitz/php-radix-tree-generator/master/assets/schema/configuration.json",
+	"title": "PHP Collection Generator Configuration",
+	"description": "Configuration for PHP Collection Generator",
+	"type": "object",
+	"properties": {
+		"targets": {
+			"description": "An array of targets to generate PHP radix tree implementations for.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/target"
+			}
+		}
+	},
+	"required": [
+		"targets"
+	],
+	"$defs": {
+		"target": {
+			"type": "object",
+			"properties": {
+				"dataSource": {
+					"description": "Data source to generate radix tree implementation for.",
+					"examples": [
+						"/path/to/data.csv"
+					],
+					"type": "string"
+				},
+				"keyCol": {
+					"description": "Column in data source to build radix tree for.",
+					"examples": [
+						"column-a"
+					],
+					"type": "string"
+				},
+				"namespace": {
+					"description": "Namespace that the radix tree will belong to.",
+					"examples": [
+						"Namespace\\Path\\To\\RadixTree"
+					],
+					"type": "string"
+				},
+				"className": {
+					"description": "Class name of the radix tree.",
+					"examples": [
+						"ClassName"
+					],
+					"type": "string"
+				}
+			},
+			"required": [
+				"itemFQN",
+				"namespace",
+				"className"
+			]
+		}
+	}
+}

@@ -1,0 +1,8 @@
+[
+	{
+		"dataSource": "./data/IP2LOCATION-ISO3166-2.CSV",
+		"keyCol": "code",
+		"namespace":"SamLitowitz\\ISO3166_2\\DataProvider",
+		"className": "RadixTree"
+	}
+]
