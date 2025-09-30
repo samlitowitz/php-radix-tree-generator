@@ -30,6 +30,8 @@ composer require --dev samlitowitz/php-radix-tree-generator
 A JSON schema for the configuration is available [here](assets/schema/configuration.json).
 The example [`RadixTree`](examples/iso-3166-2/RadixTree.php) is generated using the
 example [configuration](examples/iso-3166-2/config.json).
+The [`RadixTreeUnderTest`](tests/generated-code/RadixTreeUnderTest.php), generated for unit testing, is another good
+example of the generated PHP source code.
 
 ---
 This site or product includes IP2Location™ ISO 3166-2 Subdivision Code which available from https://www.ip2location.com.
