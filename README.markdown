@@ -22,7 +22,7 @@ composer require --dev samlitowitz/php-radix-tree-generator
 2. Generate the desired collection(s) by running the following command
 
    ```shell
-   ./vendor/bin/php-radix-tree generate config.json ./path/to/dir/
+   ./vendor/bin/php-radix-tree generate config.json ./path/to/output/dir/
    ```
 
 ### Configuration
