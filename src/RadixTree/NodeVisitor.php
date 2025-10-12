@@ -36,9 +36,11 @@ final class NodeVisitor extends NodeVisitorAbstract
                     break;
                 }
                 foreach ($node->props as $prop) {
+                    /** @phpstan-ignore instanceof.alwaysTrue */
                     if (!($prop instanceof Node\PropertyItem)) {
                         continue;
                     }
+                    /** @phpstan-ignore instanceof.alwaysTrue */
                     if (!($prop->name instanceof Node\VarLikeIdentifier)) {
                         continue;
                     }
@@ -52,5 +54,6 @@ final class NodeVisitor extends NodeVisitorAbstract
                     }
                 }
         }
+        return null;
     }
 }
