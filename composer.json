@@ -9,7 +9,9 @@
             "email": "samlitowitz@users.noreply.github.com"
         }
     ],
-    "sort-packages": true,
+    "config": {
+        "sort-packages": true
+    },
     "bin":  [
         "bin/php-radix-tree"
     ],
