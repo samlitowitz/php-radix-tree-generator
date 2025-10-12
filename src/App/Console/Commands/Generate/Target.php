@@ -8,4 +8,5 @@ final class Target
     public string $keyCol;
     public string $namespace;
     public string $className;
+    public bool $minify = false;
 }

@@ -47,6 +47,11 @@
 						"ClassName"
 					],
 					"type": "string"
+				},
+				"minify": {
+					"description": "Minify the generated code if true.",
+					"type": "boolean",
+					"default": false
 				}
 			},
 			"required": [
