@@ -13,7 +13,7 @@ on:
 
 jobs:
     php80:
-        name: PHP 8.0
+        name: PHP 8.4
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
             -   name: Setup PHP
                 uses: shivammathur/setup-php@v2
                 with:
-                    php-version: '8.0'
+                    php-version: '8.4'
 
             -   name: Validate composer.json
                 run: composer validate --strict
