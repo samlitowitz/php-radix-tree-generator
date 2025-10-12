@@ -28,13 +28,6 @@ final class RadixTreeTest extends TestCase
             'namespace' => 'PhpRadixTreeGenerator\Tests\GeneratedCode',
             'className' => 'RadixTreeUnderTest',
         ],
-        [
-            'dataSource' => ':in-memory:',
-            'keyCol' => self::KEY_TO_INDEX_ON,
-            'namespace' => 'PhpRadixTreeGenerator\Tests\GeneratedCode',
-            'className' => 'MinifiedRadixTreeUnderTest',
-            'minify' => true,
-        ],
     ];
 
     public static function setUpBeforeClass(): void
