@@ -1,5 +1,5 @@
 # PHP Radix Tree Generator
-[![Pipes](https://github.com/samlitowitz/php-radix-tree-generator/actions/workflows/pipes.yaml/badge.svg?branch=master)](https://github.com/samlitowitz/php-radix-tree-generator/actions/workflows/pipes.yaml)
+[![Pipes](https://github.com/samlitowitz/php-radix-tree-generator/actions/workflows/pipes.yaml/badge.svg)](https://github.com/samlitowitz/php-radix-tree-generator/actions/workflows/pipes.yaml)
 
 Generate PHP code for a Radix Tree for a static set of data
 
