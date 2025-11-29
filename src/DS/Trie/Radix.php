@@ -178,7 +178,9 @@ final class Radix implements Trie
                         // node has exactly one remaining child, merge child and update index on parent
                         $remainingChildKey = array_keys($node->children);
                         if (count($remainingChildKey) !== 1) {
-                            throw new \RuntimeException('expected exactly one child remaining, more than one child remains');
+                            throw new \RuntimeException(
+                                'expected exactly one child remaining, more than one child remains'
+                            );
                         }
                         $remainingChildKey = $remainingChildKey[0];
                         $remainingChild = $node->children[$remainingChildKey];
@@ -251,7 +253,7 @@ final class Radix implements Trie
         $keyToSplit = null;
         $splitKey = null;
         foreach ($node->children as $childKey => $child) {
-            $childKey = (string) $childKey;
+            $childKey = (string)$childKey;
             $sharedKey = '';
             for ($i = 0; $i < $keyLen; $i++) {
                 if ($childKey[$i] !== $key[$i]) {

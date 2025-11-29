@@ -2,6 +2,7 @@
 
 namespace PhpRadixTreeGenerator\RadixTree;
 
+use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Expr\Array_;
 use PhpParser\Node\Name;
@@ -13,9 +14,9 @@ use PhpRadixTreeGenerator\App\Console\Commands\Generate\Target;
 final class NodeVisitor extends NodeVisitorAbstract
 {
     public function __construct(
-        private Target $target,
-        private Array_ $rootExpr,
-        private int $count
+        private readonly Target $target,
+        private readonly Array_ $rootExpr,
+        private readonly int $count,
     ) {
     }
 
@@ -36,9 +37,11 @@ final class NodeVisitor extends NodeVisitorAbstract
                     break;
                 }
                 foreach ($node->props as $prop) {
+                    /** @phpstan-ignore instanceof.alwaysTrue */
                     if (!($prop instanceof Node\PropertyItem)) {
                         continue;
                     }
+                    /** @phpstan-ignore instanceof.alwaysTrue */
                     if (!($prop->name instanceof Node\VarLikeIdentifier)) {
                         continue;
                     }
@@ -52,5 +55,6 @@ final class NodeVisitor extends NodeVisitorAbstract
                     }
                 }
         }
+        return null;
     }
 }

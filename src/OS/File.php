@@ -8,7 +8,7 @@ use RuntimeException;
 
 final class File implements Closer, Writer
 {
-    /** @var resource $h */
+    /** @var ?resource $h */
     private $h;
     /** @var string */
     private $name;
