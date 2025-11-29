@@ -6,7 +6,7 @@
 
 namespace PhpRadixTreeGenerator\Tests\GeneratedCode;
 
-final class RadixTreeUnderTest implements \Countable
+final class RadixTreeUnderTest_ implements \Countable
 {
     public function search(string $key, bool $matchExact = true): array
     {

@@ -26,7 +26,7 @@ final class RadixTreeTest extends TestCase
             'dataSource' => ':in-memory:',
             'keyCol' => self::KEY_TO_INDEX_ON,
             'namespace' => 'PhpRadixTreeGenerator\Tests\GeneratedCode',
-            'className' => 'RadixTreeUnderTest',
+            'className' => 'RadixTreeUnderTest_',
         ],
     ];
 
